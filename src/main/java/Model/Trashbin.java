@@ -1,11 +1,11 @@
 package Model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Trashbin
 {
     private int id;
-    private java.util.Date date;
+    private LocalDateTime dateTime;
     private String location;
     private int percentageFull;
     private boolean readyForEmptying;
@@ -16,6 +16,22 @@ public class Trashbin
     private boolean isRedLight;
     private boolean dangerous;
     private boolean immediately;
+
+    public Trashbin(int id, LocalDateTime dateTime, String location, int percentageFull, boolean readyForEmptying, int daysSinceLastEmptied, boolean isGreenLight, boolean isGreenBlink, boolean isYellowBlink, boolean isRedLight, boolean dangerous, boolean immediately)
+    {
+        this.id = id;
+        this.dateTime = dateTime;
+        this.location = location;
+        this.percentageFull = percentageFull;
+        this.readyForEmptying = readyForEmptying;
+        this.daysSinceLastEmptied = daysSinceLastEmptied;
+        this.isGreenLight = isGreenLight;
+        this.isGreenBlink = isGreenBlink;
+        this.isYellowBlink = isYellowBlink;
+        this.isRedLight = isRedLight;
+        this.dangerous = dangerous;
+        this.immediately = immediately;
+    }
 
     public boolean isImmediately()
     {
@@ -117,14 +133,14 @@ public class Trashbin
         this.location = location;
     }
 
-    public Date getDate()
+    public LocalDateTime getDateTime()
     {
-        return date;
+        return dateTime;
     }
 
-    public void setDate(Date date)
+    public void setDateTime(LocalDateTime dateTime)
     {
-        this.date = date;
+        this.dateTime = dateTime;
     }
 
     public int getId()

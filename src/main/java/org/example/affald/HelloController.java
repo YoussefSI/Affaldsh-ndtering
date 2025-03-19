@@ -1,6 +1,6 @@
 package org.example.affald;
 
-import Model.Trashbin;
+import Model.TrashbinStatus;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.stage.FileChooser;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class HelloController
 {
-    private List<Trashbin> trashbins;
+    private List<TrashbinStatus> trashbins;
     @FXML
     private Label welcomeText;
 
@@ -45,7 +45,7 @@ public class HelloController
             while ((line = br.readLine()) != null)
             {
                 String[] values = line.split(",");
-                Trashbin trashbin = new Trashbin(
+                TrashbinStatus trashbin = new TrashbinStatus(
                         Integer.parseInt(values[0]),
                         LocalDateTime.parse(values[1]),
                         values[2],

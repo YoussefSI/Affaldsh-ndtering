@@ -12,13 +12,17 @@ public class TrashbinStatus
     private boolean readyForEmptying;
     private boolean isDangerous;
 
-    public TrashbinStatus(int trashbinID, LocalDateTime dateTime, int percentageFull, boolean readyForEmptying, boolean isDangerous, int statusID)
+    public TrashbinStatus(int trashbinID, LocalDateTime dateTime, int percentageFull, boolean isDangerous, boolean readyForEmptying)
     {
         this.trashbinID = trashbinID;
         this.dateTime = dateTime;
         this.percentageFull = percentageFull;
         this.readyForEmptying = readyForEmptying;
         this.isDangerous = isDangerous;
+    }
+
+    public TrashbinStatus()
+    {
     }
 
     public int getTrashbinStatusID()
@@ -39,6 +43,16 @@ public class TrashbinStatus
     public void setTrashbinID(int trashbinID)
     {
         this.trashbinID = trashbinID;
+    }
+
+    public int getStatusID()
+    {
+        return statusID;
+    }
+
+    public void setStatusID(int statusID)
+    {
+        this.statusID = statusID;
     }
 
     public LocalDateTime getDateTime()
@@ -80,10 +94,4 @@ public class TrashbinStatus
     {
         this.isDangerous = isDangerous;
     }
-
-
-
-
-
-
 }

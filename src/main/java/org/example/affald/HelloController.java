@@ -47,17 +47,10 @@ public class HelloController
                 String[] values = line.split(",");
                 TrashbinStatus trashbin = new TrashbinStatus(
                         Integer.parseInt(values[0]),
-                        LocalDateTime.parse(values[1]),
-                        values[2],
-                        Integer.parseInt(values[3]),
-                        Boolean.parseBoolean(values[4]),
-                        Integer.parseInt(values[5]),
-                        Boolean.parseBoolean(values[6]),
-                        Boolean.parseBoolean(values[7]),
-                        Boolean.parseBoolean(values[8]),
-                        Boolean.parseBoolean(values[9]),
-                        Boolean.parseBoolean(values[10]),
-                        Boolean.parseBoolean(values[11]));
+                        LocalDateTime.now(),
+                        Integer.parseInt(values[1]),
+                        Boolean.parseBoolean(values[2]),
+                        Boolean.parseBoolean(values[3]));
                 trashbins.add(trashbin);
             }
         }
